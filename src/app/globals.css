@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button {
+  @apply relative inline-block cursor-pointer align-middle no-underline text-[inherit] p-0 border-0;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+button.learn-more {
+  @apply w-48 h-auto;
+}
+button.learn-more .circle {
+  @apply transition-all duration-[0.45s] ease-[cubic-bezier(0.65,0,0.076,1)] relative block w-12 h-12 m-0 rounded-[1.625rem];
+  background: #FFD889;
+}
+button.learn-more .circle .icon {
+  @apply transition-all duration-[0.45s] ease-[cubic-bezier(0.65,0,0.076,1)] absolute m-auto inset-y-0;
+  background: #2B2B2B;
+}
+button.learn-more .circle .icon.arrow {
+  @apply transition-all duration-[0.45s] ease-[cubic-bezier(0.65,0,0.076,1)] w-[1.125rem] h-0.5 left-2.5 before:absolute before:content-[""] before:top-[-0.29rem] before:w-2.5 before:h-2.5 before:rotate-45 before:border-r-2 before:border-r-black before:border-t-2 before:border-t-black before:border-solid before:right-px;
+  background: none;
+}
+button.learn-more .button-text {
+  @apply transition-all duration-[0.45s] ease-[cubic-bezier(0.65,0,0.076,1)] absolute text-white font-bold leading-[1.6] text-center uppercase ml-[1.85rem] mr-0 my-0 px-0 py-3 inset-0;
+}
+button:hover .circle {
+  @apply w-full;
+}
+button:hover .circle .icon.arrow {
+  @apply translate-x-4 translate-y-0;
+  background: #2B2B2B;
+}
+button:hover .button-text {
+  @apply text-black;
+}
