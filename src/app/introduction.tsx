@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MainContainer } from "@/components/containers";
+import Header from "./header";
 
 export default function introduction() {
   return (
     <div className="w-full h-auto bg-[url('/sun-tornado.png')] bg-no-repeat bg-center bg-fixed bg-cover">
       <MainContainer>
+      <Header />
         <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-8 py-[60px] justify-evenly items-center">
           <div className="flex flex-col gap-2 lg:gap-4 ">
             <h1 className="text-4xl font-bold text-white">
