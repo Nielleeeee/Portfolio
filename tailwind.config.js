@@ -24,7 +24,7 @@ module.exports = {
       'black': '#2B2B2B',
       'mainbg': '#FFB880',
       'primary': '#FF9D4F',
-      'secondary': 'FF770B',
+      'secondary': '#FF770B',
       'tertiary': '#FFD889',
     }
   },
