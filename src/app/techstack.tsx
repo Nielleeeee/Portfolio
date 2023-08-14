@@ -4,15 +4,15 @@ import CardTechStack from "@/components/cardTechStack";
 
 export default function TechStack() {
   return (
-    <section className="bg-white h-auto py-20">
+    <section className="w-full h-auto bg-[url('/liquid-cheese.png')] bg-no-repeat bg-center bg-fixed bg-cover py-20">
       <MainContainer>
-        <h2 className="w-full text-center text-secondary font-bold text-4xl mb-10">
+        <h2 className="w-full text-center text-secondary font-bold text-3xl mb-10">
           Tech Stack
         </h2>
 
         <div
           id="card-container"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-10 gap-4 md:gap-8 lg:gap-12 w-full justify-center items-center"
+          className="flex flex-wrap px-10 gap-4 md:gap-8 w-full justify-center items-center"
         >
           <CardTechStack
             frontTitle="Front End"
