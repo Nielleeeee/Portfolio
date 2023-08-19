@@ -1,6 +1,7 @@
 import Introduction from "./introduction";
 import TechStack from "./techstack";
 import About from "./about";
+import Projects from "./projects";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Introduction />
       <About />
       <TechStack />
+      <Projects />
     </main>
   );
 }

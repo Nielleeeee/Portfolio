@@ -3,12 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { MainContainer } from "@/components/containers";
 import Header from "./header";
+import Socials from "@/components/socials";
 
 export default function introduction() {
   return (
     <div className="w-full h-auto bg-[url('/sun-tornado.png')] bg-no-repeat bg-center bg-fixed bg-cover">
       <MainContainer>
-      <Header />
+        <Header />
         <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-8 py-[60px] justify-evenly items-center">
           <div className="flex flex-col gap-2 lg:gap-4 ">
             <h1 className="text-4xl font-bold text-white">
@@ -18,7 +19,10 @@ export default function introduction() {
               A Web Developer
             </h2>
 
-            <Link href={"https://github.com/Nielleeeee?tab=repositories"} target="_blank">
+            <Link
+              href={"https://github.com/Nielleeeee?tab=repositories"}
+              target="_blank"
+            >
               <button className="learn-more">
                 <span className="circle" aria-hidden="true">
                   <span className="icon arrow"></span>
@@ -26,6 +30,10 @@ export default function introduction() {
                 <span className="button-text">Learn More</span>
               </button>
             </Link>
+
+            <div className="w-full flex items-center justify-center mt-10">
+              <Socials />
+            </div>
           </div>
 
           <Image

@@ -21,17 +21,15 @@ export default function About() {
 
           <div className="w-full md:w-1/2 flex flex-col gap-4">
             <p className="font-medium text-justify">
-              Greetings! I&apos;m Jan Danielle A. Plaza, a dynamic Full Stack
-              Developer and Software Engineer, proficient in a wide array of
-              front-end and back-end technologies, including HTML, CSS
-              (Bootstrap, Tailwind, SCSS), JavaScript (jQuery), PHP, Node.js,
-              and frameworks like NextJS and Laravel. Guided by a solid grasp of
-              software engineering principles, I specialize in crafting
-              innovative web solutions that elevate user experiences. My
-              hands-on experience encompasses versatile technology stacks,
-              empowering me to tackle UI enhancements and bug fixes with
-              resourcefulness and adaptability. Through my portfolio, I invite you
-              to explore my passion for creating impactful web projects.
+              Hello! I&apos;m Jan Danielle A. Plaza, a versatile Full Stack Developer
+              and Software Engineer adept in front-end (HTML, CSS - Bootstrap,
+              Tailwind, SCSS) and back-end (JavaScript - jQuery, PHP, Node.js)
+              technologies. I&apos;m skilled in frameworks like NextJS and Laravel.
+              With a strong foundation in software engineering, I excel in
+              crafting creative web solutions for enhanced user experiences. My
+              hands-on experience spans diverse tech stacks, enabling me to
+              efficiently handle UI enhancements and bug fixes. Explore my
+              portfolio to witness my passion for impactful web projects!
             </p>
 
             <Link
