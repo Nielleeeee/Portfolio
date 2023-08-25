@@ -19,9 +19,9 @@ export default function CardProject({
     <Link
       href={ProjectLink ? ProjectLink : `#`}
       target="_blank"
-      className="w-full basis-full lg:basis-[48%] aspect-[16/10] relative text-[#252525] rounded-lg overflow-hidden shadow-[0px_10px_15px_rgba(255,157,79,0.3)] transition-shadow duration-[0.3s] ease-[ease-in-out] hover:shadow-[0px_15px_30px_rgba(80,80,80,0.5)];"
+      className="group w-full basis-full lg:basis-[48%] aspect-[16/10] relative text-[#252525] rounded-lg overflow-hidden shadow-[0px_10px_15px_rgba(255,157,79,0.3)] transition-shadow duration-[0.3s] ease-[ease-in-out] hover:shadow-[0px_15px_30px_rgba(80,80,80,0.5)];"
     >
-      <div className="h-full w-full flex items-center justify-center absolute bg-contain bg-center transition-transform duration-[0.3s] ease-[ease-in-out] z-[2] hover:translate-y-[-80%] sm:hover:translate-y-[-60%] md:hover:translate-y-[-36%] lg:hover:translate-y-[-60%] bg-gradient-to-b from-mainbg to-tertiary">
+      <div className="h-full w-full flex items-center justify-center absolute bg-contain bg-center transition-transform duration-[0.3s] ease-[ease-in-out] z-[2] group-hover:translate-y-[-80%] sm:group-hover:translate-y-[-60%] md:group-hover:translate-y-[-36%] lg:group-hover:translate-y-[-60%] bg-gradient-to-b from-mainbg to-tertiary">
         <Image
           src={ProjectImage ? `/${ProjectImage}` : "rainbow-vortex.png"}
           alt="Project's Background"
