@@ -3,6 +3,7 @@ import TechStack from "./techstack";
 import About from "./about";
 import Projects from "./projects";
 import Experience from "./experience";
+import Footer from "./footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <TechStack />
       <Projects />
       <Experience />
+      <Footer />
     </main>
   );
 }
