@@ -4,6 +4,7 @@ import About from "./about";
 import Projects from "./projects";
 import Experience from "./experience";
 import Footer from "./footer";
+import Contact from "./contact";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <TechStack />
       <Projects />
       <Experience />
+      <Contact />
       <Footer />
     </main>
   );

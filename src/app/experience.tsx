@@ -32,7 +32,7 @@ export default function Experience() {
             />
           </ol>
 
-          <div className="hidden md:flex w-1/3">
+          <div className="hidden md:flex w-1/2">
             <Image
               src="/illus-study.gif"
               width={1000}
@@ -46,7 +46,7 @@ export default function Experience() {
         <h2 className="w-full text-center text-white font-bold text-3xl mb-10">
           Experience
         </h2>
-        <div className="flex flex-row justify-between items-center px-6 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12">
+        <div className="flex flex-row justify-between px-6 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12">
           <ol className="relative border-l border-white h-max w-full md:w-1/2">
             <ListExperience
               date="April 2023 - July 2023"

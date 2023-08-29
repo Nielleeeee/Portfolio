@@ -8,11 +8,11 @@ export default function Header() {
       <div id="logo">
         <Link href={"/"}>
           <Image
-            src={"/logo-front-black-transparent.png"}
-            width={100}
-            height={100}
+            src={"/logo-header.png"}
+            width={1000}
+            height={1000}
             alt="logo"
-            className="rounded-lg max-w-full w-[200px] h-auto"
+            className="max-w-full w-[200px] h-auto"
           />
         </Link>
       </div>

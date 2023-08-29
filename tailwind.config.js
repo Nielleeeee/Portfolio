@@ -28,5 +28,7 @@ module.exports = {
       'tertiary': '#FFD889',
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }
