@@ -5,7 +5,7 @@ import { MainContainer } from "@/components/containers";
 
 export default function About() {
   return (
-    <section className="w-full h-auto bg-white py-10">
+    <section id="about" className="w-full h-auto bg-white py-10">
       <MainContainer>
         <div
           id="row-wrapper"

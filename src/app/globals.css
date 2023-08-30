@@ -37,6 +37,8 @@ button:hover .button-text {
   @apply text-black;
 }
 
+/* Flip card */
+
 .flip-card {
   perspective: 1000px;
   font-family: sans-serif;
@@ -54,4 +56,34 @@ button:hover .button-text {
 }
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+/* Nav Menu Burger */
+.burger {
+  @apply relative w-[34px] h-[30px] cursor-pointer;
+  background: transparent;
+}
+.burger input {
+  @apply hidden;
+}
+.burger span {
+  @apply block absolute h-1 w-full opacity-100 rotate-0 transition-[0.25s] duration-[ease-in-out] rounded-[9px] left-0 bg-white;
+}
+.burger span:nth-of-type(1) {
+  @apply origin-[left_center] top-0;
+}
+.burger span:nth-of-type(2) {
+  @apply -translate-y-2/4 origin-[left_center] top-2/4;
+}
+.burger span:nth-of-type(3) {
+  @apply origin-[left_center] -translate-y-full top-full;
+}
+.burger input:checked ~ span:nth-of-type(1) {
+  @apply rotate-45 left-[5px] top-0;
+}
+.burger input:checked ~ span:nth-of-type(2) {
+  @apply w-[0%] opacity-0;
+}
+.burger input:checked ~ span:nth-of-type(3) {
+  @apply -rotate-45 left-[5px] top-7;
 }

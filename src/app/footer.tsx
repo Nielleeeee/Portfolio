@@ -33,7 +33,7 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-black transition hover:text-white"
-                  href="/"
+                  href="#about"
                 >
                   About
                 </Link>
@@ -42,16 +42,16 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-black transition hover:text-white"
-                  href="/"
+                  href="#tech-stack"
                 >
-                  Services
+                  Tech Stack
                 </Link>
               </li>
 
               <li>
                 <Link
                   className="text-black transition hover:text-white"
-                  href="/"
+                  href="#projects"
                 >
                   Projects
                 </Link>
@@ -60,9 +60,18 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-black transition hover:text-white"
-                  href="/"
+                  href="#experience"
                 >
-                  Blog
+                  Experience
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-black transition hover:text-white"
+                  href="#contact"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

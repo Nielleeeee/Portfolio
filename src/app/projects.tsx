@@ -4,7 +4,7 @@ import CardProject from "@/components/cardProject";
 
 export default function Projects() {
   return (
-    <section className="w-full h-auto bg-white py-10">
+    <section id="projects" className="w-full h-auto bg-white py-10">
       <MainContainer>
         <div className="py-0 lg:py-10">
           <h2 className="w-full text-center text-secondary font-bold text-3xl mb-10">

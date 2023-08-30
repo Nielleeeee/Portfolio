@@ -4,7 +4,7 @@ import CardTechStack from "@/components/cardTechStack";
 
 export default function TechStack() {
   return (
-    <section className="w-full h-auto bg-[url('/liquid-cheese.png')] bg-no-repeat bg-center bg-fixed bg-cover py-20">
+    <section id="tech-stack" className="w-full h-auto bg-[url('/liquid-cheese.png')] bg-no-repeat bg-center bg-fixed bg-cover py-20">
       <MainContainer>
         <h2 className="w-full text-center text-secondary font-bold text-3xl mb-10 xl:mb-20">
           Tech Stack

@@ -7,7 +7,7 @@ import Socials from "@/components/socials";
 
 export default function introduction() {
   return (
-    <div className="w-full h-auto bg-[url('/sun-tornado.png')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <section id="introduction" className="w-full h-auto bg-[url('/sun-tornado.png')] bg-no-repeat bg-center bg-fixed bg-cover">
       <MainContainer>
         <Header />
         <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-8 py-[60px] justify-evenly items-center">
@@ -45,6 +45,6 @@ export default function introduction() {
           />
         </div>
       </MainContainer>
-    </div>
+    </section>
   );
 }
