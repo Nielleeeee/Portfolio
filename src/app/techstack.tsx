@@ -45,7 +45,7 @@ export default function TechStack() {
           <CardTechStack
             frontTitle="Others"
             frontImage="/folder.gif"
-            backContent={["Git (Gitlab, Github)", ""]}
+            backContent={["Git (Gitlab, Github)", "C++", "C#", "JAVA", "Python"]}
           />
         </div>
       </MainContainer>

@@ -5,8 +5,11 @@ import React, { useState, useEffect } from "react";
 export default function ScrollTop() {
   const [visible, setVisible] = useState(false);
 
-  const toggleVisible = () => {
-    if (window.scrollY > 500) {
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const footerOffset = document.documentElement.scrollHeight - window.innerHeight - 160;
+
+    if (scrollY > 200 && scrollY < footerOffset) {
       setVisible(true);
     } else {
       setVisible(false);
@@ -20,9 +23,9 @@ export default function ScrollTop() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", toggleVisible);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -36,9 +39,6 @@ export default function ScrollTop() {
       <svg height="1.2em" className="fill-white" viewBox="0 0 512 512">
         <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
       </svg>
-      <p className="text-[0.8em] w-[100px] absolute text-black flex items-center justify-center bottom-[-24px] opacity-0 duration-[0.7s] group-hover:opacity-100 group-hover:duration-[0.7s]">
-        Back to Top
-      </p>
     </button>
   );
 }
