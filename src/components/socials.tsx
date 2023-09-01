@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import { root } from "postcss";
 
 export default function Socials() {
+  const rootUrl = process.env.ROOT_URL;
+
   return (
     <div className="flex justify-center items-center w-max bg-white shadow-[0px_0px_15px_#00000027] px-8 py-[15px] rounded-[5em]">
       <Link
@@ -23,7 +26,7 @@ export default function Socials() {
         className="flex justify-center items-center w-[50px] h-[50px] bg-[#0077b5] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-        className="fill-white group-hover:fill-[#0077b5] w-[24px] h-[24px]"
+          className="fill-white group-hover:fill-[#0077b5] w-[24px] h-[24px]"
           viewBox="0 -2 44 44"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +48,7 @@ export default function Socials() {
         className="flex justify-center items-center w-[50px] h-[50px] bg-[#3b5998] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-        className="fill-white group-hover:fill-[#3b5998] w-[24px] h-[24px]"
+          className="fill-white group-hover:fill-[#3b5998] w-[24px] h-[24px]"
           version="1.1"
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +74,7 @@ export default function Socials() {
         className="flex justify-center items-center w-[50px] h-[50px] bg-[#c13584] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-        className="fill-white group-hover:fill-[#c13584] w-[24px] h-[24px]"
+          className="fill-white group-hover:fill-[#c13584] w-[24px] h-[24px]"
           width="800px"
           height="800px"
           viewBox="0 0 20 20"
@@ -92,6 +95,28 @@ export default function Socials() {
               </g>
             </g>
           </g>
+        </svg>
+      </Link>
+      <Link
+        href={`${rootUrl}/Jan%20Danielle%20Plaza.pdf`}
+        download={"Jan Danielle Plaza.pdf"}
+        target="_blank"
+        className="flex justify-center items-center w-[50px] h-[50px] bg-primary shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="feather feather-download stroke-white group-hover:stroke-black w-[24px] h-[24px]"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
         </svg>
       </Link>
     </div>
