@@ -18,7 +18,7 @@ export default function introduction() {
             <h1 className="text-4xl font-bold text-white text-center">
               Hi, I&apos;m Jan Danielle Plaza
             </h1>
-            <h2 className="text-xl font-semibold text-white max-w-lg text-center">
+            <h2 className="text-xl font-medium text-white max-w-lg text-center">
               A Full Stack Developer, It&apos;s a pleasure to have you here as
               we delve into my web development ventures.
             </h2>
