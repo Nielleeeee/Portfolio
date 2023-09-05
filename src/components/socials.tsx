@@ -97,8 +97,8 @@ export default function Socials() {
         </svg>
       </Link>
       <Link
-        href={`${rootUrl}/Jan%20Danielle%20Plaza.pdf`}
-        download={"Jan Danielle Plaza.pdf"}
+        href={`${rootUrl}/Jan%20Danielle%20Plaza%20Resume.pdf`}
+        download={"Jan Danielle Plaza Resume.pdf"}
         target="_blank"
         title="Download my resume"
         className="flex justify-center items-center w-[50px] h-[50px] bg-primary shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"

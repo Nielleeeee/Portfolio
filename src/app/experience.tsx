@@ -5,7 +5,10 @@ import Image from "next/image";
 
 export default function Experience() {
   return (
-    <section id="experience" className="w-full h-auto bg-[url('/rainbow-vortex.png')] bg-no-repeat bg-center bg-fixed bg-cover py-20">
+    <section
+      id="experience"
+      className="w-full h-auto bg-[url('/rainbow-vortex.png')] bg-no-repeat bg-center bg-fixed bg-cover py-20"
+    >
       <MainContainer>
         <h2 className="w-full text-center text-white font-bold text-3xl mb-10">
           Education
@@ -48,6 +51,15 @@ export default function Experience() {
         </h2>
         <div className="flex flex-row justify-between px-6 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12">
           <ol className="relative border-l border-white h-max w-full md:w-1/2">
+            <ListExperience
+              date="September 2022 - November 2022"
+              jobTitle="Freelance Web Design"
+              jobDescription="Executed four distinct projects for clients, encompassing students and small businesses. 
+              Utilized CSS and HTML to craft tailored websites, including personal portfolios, blogs, and landing 
+              pages.Managed the entire project lifecycle, from conceptualization to final delivery, to meet clients' specific 
+              needs and visions."
+            />
+
             <ListExperience
               date="April 2023 - July 2023"
               jobTitle="Full Stack Developer Intern (August 99 / TaoCrowd, Inc.)"
