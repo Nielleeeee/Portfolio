@@ -1,6 +1,6 @@
 import React from "react";
 import { MainContainer } from "@/components/containers";
-import CardProject from "@/components/cardProject";
+import NewCard from "@/components/newCard";
 
 export default function Projects() {
   return (
@@ -11,31 +11,35 @@ export default function Projects() {
             Projects
           </h2>
           <div className="w-full flex flex-col gap-4 md:gap-8">
-            <div className="flex flex-wrap flex-row gap-8 w-full justify-center items-center px-4 md:px-8">
-              <CardProject
+            <div className="flex flex-wrap flex-row gap-8 w-full justify-center items-center px-0 sm:px-4 md:px-8">
+              <NewCard
                 ProjectLink="https://github.com/Nielleeeee/SimpleLibrarySystem"
                 ProjectImage="bg-library.jpg"
                 ProjectName="Simple Library System"
                 ProjectDescription="Developed an interactive library system allowing students, professors, instructors, and alumni to contribute and share instructional materials. Utilized VB.NET and MySQL for efficient data management."
+                ProjectStatus="Done"
               />
 
-              <CardProject
+              <NewCard
                 ProjectLink="https://github.com/Nielleeeee/myPhotoGallery"
                 ProjectImage="bg-photo-gallery.jpg"
                 ProjectName="Photo Gallery"
                 ProjectDescription="Created a social photo gallery resembling Instagram, enabling users to upload, share, and engage with images. Implemented using PHP and MySQL."
+                ProjectStatus="Done"
               />
-              <CardProject
+              <NewCard
                 ProjectLink="https://github.com/Nielleeeee/react-calculator"
                 ProjectImage="bg-calculator.jpg"
                 ProjectName="Calculator"
                 ProjectDescription="Crafted a mini calculator using Next.js, utilizing React and JavaScript for smooth interaction."
+                ProjectStatus="Done?"
               />
-              <CardProject
+              <NewCard
                 ProjectLink="https://pup-iladderize-iladderize.vercel.app"
                 ProjectImage="pup-iladderize-site.png"
                 ProjectName="PUP I-ladderize"
                 ProjectDescription="Engineered a comprehensive enrollment system, enabling applicants to verify eligibility and receive notifications. Developed with Next.js, TailwindCSS, React, and Node.js for optimal user experience."
+                ProjectStatus="Done?"
               />
             </div>
           </div>

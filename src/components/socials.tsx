@@ -5,14 +5,14 @@ export default function Socials() {
   const rootUrl = process.env.ROOT_URL;
 
   return (
-    <div className="flex justify-center items-center w-max bg-white shadow-[0px_0px_15px_#00000027] px-8 py-[15px] rounded-[5em]">
+    <div className="flex justify-center items-center w-max bg-white shadow-[0px_0px_15px_#00000027] px-6 py-3 md:px-8 md:py-4 rounded-[5em]">
       <Link
         href="https://github.com/Nielleeeee"
         target="_blank"
-        className="flex justify-center items-center w-[50px] h-[50px] bg-[#333] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
+        className="flex justify-center items-center w-[36px] h-[38px] md:w-[50px] md:h-[50px] bg-[#333] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-1 sm:mx-2 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-          className="cf-icon-svg fill-white group-hover:fill-[#333] w-[24px] h-[24px]"
+          className="cf-icon-svg fill-white group-hover:fill-[#333] w-5 h-5 md:w-6 md:h-6"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="-2.5 0 19 19"
         >
@@ -22,10 +22,10 @@ export default function Socials() {
       <Link
         href="https://www.linkedin.com/in/jan-danielle-plaza-107492262/"
         target="_blank"
-        className="flex justify-center items-center w-[50px] h-[50px] bg-[#0077b5] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
+        className="flex justify-center items-center w-[36px] h-[38px] md:w-[50px] md:h-[50px] bg-[#0077b5] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-1 sm:mx-2 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-          className="fill-white group-hover:fill-[#0077b5] w-[24px] h-[24px]"
+          className="fill-white group-hover:fill-[#0077b5] w-5 h-5 md:w-6 md:h-6"
           viewBox="0 -2 44 44"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,10 +44,10 @@ export default function Socials() {
       <Link
         href="https://www.facebook.com/nielleplaza"
         target="_blank"
-        className="flex justify-center items-center w-[50px] h-[50px] bg-[#3b5998] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
+        className="flex justify-center items-center w-[36px] h-[38px] md:w-[50px] md:h-[50px] bg-[#3b5998] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-1 sm:mx-2 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-          className="fill-white group-hover:fill-[#3b5998] w-[24px] h-[24px]"
+          className="fill-white group-hover:fill-[#3b5998] w-5 h-5 md:w-6 md:h-6"
           version="1.1"
           id="Layer_1"
           xmlns="http://www.w3.org/2000/svg"
@@ -70,10 +70,10 @@ export default function Socials() {
       <Link
         href="https://www.instagram.com/nielleplaza/"
         target="_blank"
-        className="flex justify-center items-center w-[50px] h-[50px] bg-[#c13584] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
+        className="flex justify-center items-center w-[36px] h-[38px] md:w-[50px] md:h-[50px] bg-[#c13584] shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-1 sm:mx-2 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
-          className="fill-white group-hover:fill-[#c13584] w-[24px] h-[24px]"
+          className="fill-white group-hover:fill-[#c13584] w-5 h-5 md:w-6 md:h-6"
           width="800px"
           height="800px"
           viewBox="0 0 20 20"
@@ -101,7 +101,7 @@ export default function Socials() {
         download={"Jan Danielle Plaza Resume.pdf"}
         target="_blank"
         title="Download my resume"
-        className="flex justify-center items-center w-[50px] h-[50px] bg-primary shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-2.5 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
+        className="flex justify-center items-center w-[36px] h-[38px] md:w-[50px] md:h-[50px] bg-primary shadow-[0px_0px_4px_#00000027] transition-[0.3s] mx-1 sm:mx-2 my-0 rounded-[50%] hover:bg-[#f2f2f2] hover:shadow-[0px_0px_6px_3px_#00000027] group"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +112,7 @@ export default function Socials() {
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
-          className="feather feather-download stroke-white group-hover:stroke-black w-[24px] h-[24px]"
+          className="feather feather-download stroke-white group-hover:stroke-black w-5 h-5 md:w-6 md:h-6"
         >
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="7 10 12 15 17 10"></polyline>

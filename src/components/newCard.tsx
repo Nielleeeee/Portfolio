@@ -1,34 +1,53 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function newCard() {
+interface CardProject {
+  ProjectName?: string;
+  ProjectDescription?: string;
+  ProjectImage?: string;
+  ProjectLink?: string;
+  ProjectStatus?: string;
+}
+
+export default function newCard({
+  ProjectName,
+  ProjectDescription,
+  ProjectImage,
+  ProjectLink,
+  ProjectStatus,
+}: CardProject) {
   return (
-    <a href="#" className="group relative block bg-black">
+    <Link
+      href={ProjectLink ? ProjectLink : `#`}
+      target="_blank"
+      className="group w-full basis-full lg:basis-[48%] aspect-[16/10] relative text-[#252525] bg-black rounded-lg overflow-hidden shadow-[inset_0_-4px_4px_rgba(0,0,0,0.8)] transition-shadow duration-[0.3s] ease-[ease-in-out];"
+    >
       <Image
         alt="Developer"
-        width={100}
-        height={100}
-        src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
-        className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+        width={600}
+        height={600}
+        src={ProjectImage ? `/${ProjectImage}` : "/rainbow-vortex.png"}
+        className="absolute inset-0 h-full w-full object-cover opacity-40 transition-opacity group-hover:opacity-20"
       />
 
-      <div className="relative p-4 sm:p-6 lg:p-8">
-        <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
-          Developer
-        </p>
+      <div className="relative flex flex-col justify-between p-4 sm:p-6 lg:p-8 w-full h-full">
+        <div>
+          <p className="text-xs font-medium uppercase tracking-widest text-[#ffffff]">
+            {ProjectStatus ? ProjectStatus : 'Done?'}
+          </p>
 
-        <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+          <p className="text-xl font-bold text-white sm:text-2xl">{ProjectName ? ProjectName : "Project Name?"}</p>
+        </div>
 
-        <div className="mt-32 sm:mt-48 lg:mt-64">
-          <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-sm text-white">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
-              perferendis hic asperiores quibusdam quidem voluptates doloremque
-              reiciendis nostrum harum. Repudiandae?
+        <div className="">
+          <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-[0] group-hover:opacity-100">
+            <p className="text-sm sm:text-base text-white">
+              {ProjectDescription ? ProjectDescription : "What description??"}
             </p>
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
