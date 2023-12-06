@@ -33,7 +33,7 @@ export default function ListExperience({
         {jobTitle ? jobTitle : "This is a job title"}
       </h3>
       {jobDescription && (
-        <p className="mb-1 text-base font-normal text-white text-justify">
+        <p className="mb-1 text-base font-normal text-white text-left">
           {jobDescription}
         </p>
       )}

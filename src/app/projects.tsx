@@ -41,6 +41,13 @@ export default function Projects() {
                 ProjectDescription="Engineered a comprehensive enrollment system, enabling applicants to verify eligibility and receive notifications. Developed with Next.js, TailwindCSS, React, and Node.js for optimal user experience."
                 ProjectStatus="Done?"
               />
+              <NewCard
+                ProjectLink="https://github.com/Nielleeeee/TodoList"
+                ProjectImage="to-do-list.jpg"
+                ProjectName="Simple To Do List"
+                ProjectDescription="Simple to do list created using nextJS server action's"
+                ProjectStatus="Done"
+              />
             </div>
           </div>
         </div>

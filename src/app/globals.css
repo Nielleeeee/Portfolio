@@ -87,3 +87,21 @@ button:hover .button-text {
 .burger input:checked ~ span:nth-of-type(3) {
   @apply -rotate-45 left-[5px] top-7;
 }
+
+.minimal-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Adjust width for vertical scrollbars */
+  height: 8px; /* Adjust height for horizontal scrollbars */
+}
+
+.minimal-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Track background */
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb {
+  background: #a0a0a0; /* Thumb color */
+  border-radius: 4px; /* Thumb border radius */
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #929292; /* Thumb color on hover */
+}
