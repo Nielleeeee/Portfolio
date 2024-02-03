@@ -1,13 +1,14 @@
-import Introduction from "./introduction";
-import TechStack from "./techstack";
-import About from "./about";
-import Projects from "./projects";
-import Experience from "./experience";
+import Introduction from "./(landingPage)/introduction";
+import TechStack from "./(landingPage)/techstack";
+import About from "./(landingPage)/about";
+import Projects from "./(landingPage)/projects";
+import Experience from "./(landingPage)/experience";
 import Footer from "../components/footer";
-import Contact from "./contact";
+import Contact from "./(landingPage)/contact";
 import ScrollTop from "@/components/scrollTop";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Certificate from "./(landingPage)/certificate";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <TechStack />
       <Projects />
       <Experience />
+      <Certificate />
       <Contact />
       <Footer />
       <ScrollTop />

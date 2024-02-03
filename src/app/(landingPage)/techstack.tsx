@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect } from "react";
 import { MainContainer } from "@/components/containers";
-import CardTechStack from "@/components/cardTechStack";
 import Image from "next/image";
 import Flicking from "@egjs/react-flicking";
 import "@egjs/react-flicking/dist/flicking.css";

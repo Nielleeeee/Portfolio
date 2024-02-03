@@ -22,14 +22,14 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
+            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-black lg:text-left">
               Crafting Sleek Digital Experiences with a Dash of Simplicity and
               Code Magic.
             </p>
           </div>
 
           <div className="flex flex-col">
-            <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12">
+            <ul className="mt-12 flex flex-wrap justify-center gap-2 md:gap-4 lg:mt-0 lg:justify-end lg:gap-12">
               <li>
                 <Link
                   className="text-black transition hover:text-white"
@@ -69,6 +69,15 @@ export default function Footer() {
               <li>
                 <Link
                   className="text-black transition hover:text-white"
+                  href="#certificate"
+                >
+                  Certificates
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-black transition hover:text-white"
                   href="#contact"
                 >
                   Contact
@@ -76,7 +85,7 @@ export default function Footer() {
               </li>
             </ul>
 
-            <p className="mt-8 text-center text-sm text-gray-500 lg:text-right">
+            <p className="mt-8 text-center text-sm text-black lg:text-right">
               &copy; Jan Danielle Plaza {currYear}. All rights reserved.
             </p>
           </div>

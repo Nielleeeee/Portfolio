@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MainContainer } from "@/components/containers";
-import Header from "../components/header";
+import Header from "../../components/header";
 import Socials from "@/components/socials";
 import Transition from "@/components/transition/transition";
 

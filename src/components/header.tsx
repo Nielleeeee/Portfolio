@@ -43,7 +43,7 @@ export default function Header() {
 
       <nav className="flex w-auto">
         {/* Desktop */}
-        <ul className="flex-row gap-10 w-full items-center justify-end text-white text-lg font-medium lg:flex hidden">
+        <ul className="flex-row gap-6 w-full items-center justify-end text-white text-lg font-medium lg:flex hidden">
           <li>
             <Link className="text-white transition group" href="#about">
               About
@@ -68,6 +68,13 @@ export default function Header() {
           <li>
             <Link className="text-white transition group" href="#experience">
               Experience
+              <div className="w-auto h-[2px] mt-[2px] bg-white transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+            </Link>
+          </li>
+
+          <li>
+            <Link className="text-white transition group" href="#certificate">
+              Certificates
               <div className="w-auto h-[2px] mt-[2px] bg-white transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
             </Link>
           </li>
@@ -136,6 +143,17 @@ export default function Header() {
                   onClick={() => setIsActive(false)}
                 >
                   Experience
+                  <div className="w-auto h-[2px] mt-[2px] bg-white transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  className="text-white transition group"
+                  href="#certificate"
+                  onClick={() => setIsActive(false)}
+                >
+                  Certificates
                   <div className="w-auto h-[2px] mt-[2px] bg-white transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
                 </Link>
               </li>
