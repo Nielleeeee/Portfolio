@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Certificate() {
-  const certificateSources = ["fcc-javascript", "fcc-frontend-library"];
+  const certificateSources = ["tesda-nc3-webdev", "fcc-javascript", "fcc-frontend-library",];
 
   const settings = {
     dots: true,
