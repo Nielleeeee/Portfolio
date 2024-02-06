@@ -18,6 +18,7 @@ export default function Certificate() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    autoplaySpeed: 8000,
   };
 
   return (
@@ -30,14 +31,13 @@ export default function Certificate() {
             </h3>
             <Slider {...settings}>
               {certificateSources.map((source, index) => (
-                <div key={index}>
+                <div key={index} className="w-full px-5 mx-auto flex justify-center items-center aspect-video overflow-hidden">
                   <Image
                     src={`/certificates/${source}.png`}
                     alt={`Certificate - ${source}`}
                     width={500}
                     height={500}
-                    layout="responsive"
-                    className="max-w-5xl px-5 mx-auto"
+                    className="w-full max-w-4xl mx-auto"
                   />
                 </div>
               ))}

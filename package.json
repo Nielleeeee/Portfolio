@@ -11,6 +11,7 @@
   "dependencies": {
     "@egjs/flicking-plugins": "^4.7.1",
     "@egjs/react-flicking": "^4.11.1",
+    "@headlessui/react": "^1.7.18",
     "@prisma/client": "^5.1.1",
     "@types/node": "20.4.7",
     "@types/react": "18.2.18",
