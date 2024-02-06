@@ -28,8 +28,6 @@ export default async function Experience() {
     data: { allEducations, allExperiences },
   } = await performRequest({ query: PAGE_CONTENT_QUERY });
 
-  console.log(allEducations);
-
   return (
     <section
       id="experience"
