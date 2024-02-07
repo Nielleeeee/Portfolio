@@ -26,6 +26,7 @@
     "nodemailer": "^6.9.4",
     "postcss": "^8.4.33",
     "react": "18.2.0",
+    "react-datocms": "^4.1.3",
     "react-dom": "18.2.0",
     "react-slick": "^0.30.1",
     "react-toastify": "^9.1.3",
