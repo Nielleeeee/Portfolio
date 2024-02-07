@@ -2,21 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface CardProject {
-  ProjectName?: string;
-  ProjectDescription?: string;
-  ProjectImage?: string;
-  ProjectLink?: string;
-  ProjectStatus?: string;
-}
-
 export default function newCard({
   ProjectName,
   ProjectDescription,
   ProjectImage,
   ProjectLink,
   ProjectStatus,
-}: CardProject) {
+}: any) {
   return (
     <Link
       href={ProjectLink ? ProjectLink : `#`}
@@ -24,20 +16,22 @@ export default function newCard({
       className="group w-full basis-full lg:basis-[48%] aspect-[16/10] relative text-[#252525] bg-black rounded-lg overflow-hidden shadow-[inset_0_-4px_4px_rgba(0,0,0,0.8)] transition-shadow duration-[0.3s] ease-[ease-in-out];"
     >
       <Image
-        alt="Developer"
+        alt={ProjectName}
         width={600}
         height={600}
-        src={ProjectImage ? `/${ProjectImage}` : "/rainbow-vortex.png"}
+        src={ProjectImage.srcSet}
         className="absolute inset-0 h-full w-full object-cover opacity-40 transition-opacity group-hover:opacity-20"
       />
 
       <div className="relative flex flex-col justify-between p-4 sm:p-6 lg:p-8 w-full h-full">
         <div>
           <p className="text-xs font-medium uppercase tracking-widest text-[#ffffff]">
-            {ProjectStatus ? ProjectStatus : 'Done?'}
+            {ProjectStatus ? ProjectStatus : "Done?"}
           </p>
 
-          <p className="text-xl font-bold text-white sm:text-2xl">{ProjectName ? ProjectName : "Project Name?"}</p>
+          <p className="text-xl font-bold text-white sm:text-2xl">
+            {ProjectName ? ProjectName : "Project Name?"}
+          </p>
         </div>
 
         <div className="">
