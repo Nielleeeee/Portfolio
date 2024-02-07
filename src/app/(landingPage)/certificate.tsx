@@ -1,25 +1,35 @@
-"use client";
-
 import React from "react";
 import Transition from "@/components/transition/transition";
 import { MainContainer } from "@/components/containers";
-import Image from "next/image";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CertificateSlider from "@/components/certificateSlider";
+import { performRequest } from "@/lib/datocms";
 
-export default function Certificate() {
-  const certificateSources = ["tesda-nc3-webdev", "fcc-javascript", "fcc-frontend-library",];
+const PAGE_CONTENT_QUERY = `
+  query Certificate {
+    allCertificates {
+      name
+      image {
+        url
+        responsiveImage {
+          srcSet
+          webpSrcSet
+          sizes
+          src
+          width
+          height
+          aspectRatio
+          alt
+          title
+          base64
+        }
+      }
+    }
+  }`;
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 8000,
-  };
+export default async function Certificate() {
+  const {
+    data: { allCertificates },
+  } = await performRequest({ query: PAGE_CONTENT_QUERY });
 
   return (
     <section id="certificate" className="w-full bg-white py-10">
@@ -29,19 +39,8 @@ export default function Certificate() {
             <h3 className="font-bold text-3xl text-secondary text-center">
               Certificates
             </h3>
-            <Slider {...settings}>
-              {certificateSources.map((source, index) => (
-                <div key={index} className="w-full px-5 mx-auto flex justify-center items-center aspect-video overflow-hidden">
-                  <Image
-                    src={`/certificates/${source}.png`}
-                    alt={`Certificate - ${source}`}
-                    width={500}
-                    height={500}
-                    className="w-full max-w-4xl mx-auto"
-                  />
-                </div>
-              ))}
-            </Slider>
+
+            <CertificateSlider certificateSources={allCertificates} />
           </div>
         </MainContainer>
       </Transition>
