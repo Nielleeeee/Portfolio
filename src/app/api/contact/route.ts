@@ -29,9 +29,22 @@ export async function POST(req: NextRequest) {
       }) as React.ReactElement,
     });
 
-    return Response.json(mail);
+    return new Response(
+      JSON.stringify({ message: "Email sent successfully." }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   } catch (error) {
-    return Response.json({ error });
+    return new Response(JSON.stringify({ message: "Could not send email." }), {
+      status: 500,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 }
 
