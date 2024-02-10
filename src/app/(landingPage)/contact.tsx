@@ -7,7 +7,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { error } from "console";
 import Transition from "@/components/transition/transition";
 
 export default function Contact() {
