@@ -25,10 +25,6 @@ export default function newCard({
 
       <div className="relative flex flex-col justify-between p-4 sm:p-6 lg:p-8 w-full h-full">
         <div>
-          <p className="text-xs font-medium uppercase tracking-widest text-[#ffffff]">
-            {ProjectStatus ? ProjectStatus : "Done?"}
-          </p>
-
           <p className="text-xl font-bold text-white sm:text-2xl">
             {ProjectName ? ProjectName : "Project Name?"}
           </p>

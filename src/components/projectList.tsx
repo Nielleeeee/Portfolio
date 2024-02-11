@@ -11,7 +11,6 @@ export default function ProjectList({ projectList }: any) {
           ProjectImage={project.image.responsiveImage}
           ProjectName={project.name}
           ProjectDescription={project.description}
-          ProjectStatus={project.status}
         />
       ))}
     </div>
