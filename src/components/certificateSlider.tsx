@@ -18,21 +18,23 @@ export default function CertificateSlider({ certificateSources }: any) {
   };
 
   return (
-    <Slider {...settings}>
-      {certificateSources.map((certificate: any, index: any) => (
-        <div
-          key={index}
-          className="w-full px-5 mx-auto flex justify-center items-center overflow-hidden"
-        >
-          <DatoImage
-            data={certificate.image.responsiveImage}
-            pictureClassName={
-              "object-contain w-full max-w-4xl mx-auto aspect-[4/3] text-center rounded-xl"
-            }
-            className="!max-w-none"
-          />
-        </div>
-      ))}
-    </Slider>
+    <div className="px-5 sm:px-10">
+      <Slider {...settings}>
+        {certificateSources.map((certificate: any, index: any) => (
+          <div
+            key={index}
+            className="w-full px-3 md:px-5 mx-auto flex justify-center items-center overflow-hidden"
+          >
+            <DatoImage
+              data={certificate.image.responsiveImage}
+              pictureClassName={
+                "object-contain w-full max-w-4xl mx-auto aspect-[4/3] text-center rounded-xl"
+              }
+              className="!max-w-none"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 }
