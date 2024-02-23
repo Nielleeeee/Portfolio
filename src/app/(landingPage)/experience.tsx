@@ -1,6 +1,6 @@
 import React from "react";
-import { MainContainer } from "@/components/containers";
-import ListExperience from "@/components/listExperience";
+import { MainContainer } from "@/components/container/containers";
+import ListExperience from "@/components/list-experience/listExperience";
 import Image from "next/image";
 import Transition from "@/components/transition/transition";
 import { performRequest } from "@/lib/datocms";

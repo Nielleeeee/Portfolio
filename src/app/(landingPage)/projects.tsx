@@ -1,8 +1,8 @@
 import React from "react";
-import { MainContainer } from "@/components/containers";
+import { MainContainer } from "@/components/container/containers";
 import Transition from "@/components/transition/transition";
 import { performRequest } from "@/lib/datocms";
-import ProjectList from "@/components/projectList";
+import ProjectList from "@/components/list-project/projectList";
 
 const PAGE_CONTENT_QUERY = `
 query Project {
@@ -52,7 +52,10 @@ export default async function Projects() {
   } = await performRequest({ query: PAGE_CONTENT_QUERY });
 
   return (
-    <section id="projects" className="w-full h-auto bg-white py-10 bg-[url('/endless-constellation.png')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <section
+      id="projects"
+      className="w-full h-auto bg-white py-10 bg-[url('/endless-constellation.png')] bg-no-repeat bg-center bg-fixed bg-cover"
+    >
       <Transition>
         <MainContainer>
           <div className="py-5 lg:py-10">

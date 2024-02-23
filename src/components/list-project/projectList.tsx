@@ -1,5 +1,5 @@
 import React from "react";
-import NewCard from "@/components/newCard";
+import NewCard from "@/components/cards/newCard";
 
 export default function ProjectList({ projectList }: any) {
   return (

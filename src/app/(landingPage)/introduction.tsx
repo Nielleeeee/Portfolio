@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MainContainer } from "@/components/containers";
-import Header from "../../components/header";
-import Socials from "@/components/socials";
+import { MainContainer } from "@/components/container/containers";
+import Header from "../../components/layout/header";
+import Socials from "@/components/socials/socials";
 import Transition from "@/components/transition/transition";
 
 export default function introduction() {

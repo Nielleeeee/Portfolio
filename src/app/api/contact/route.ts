@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { Resend } from "resend";
-import { EmailTemplate } from "@/components/emailTemplate";
+import { EmailTemplate } from "@/components/email/emailTemplate";
 
 interface ContactForm {
   name: string;

@@ -1,7 +1,7 @@
 import React from "react";
-import { MainContainer } from "@/components/containers";
+import { MainContainer } from "@/components/container/containers";
 import Transition from "@/components/transition/transition";
-import TechStackSlider from "@/components/techStackSlider";
+import TechStackSlider from "@/components/slider/techStackSlider";
 import { performRequest } from "@/lib/datocms";
 
 const PAGE_CONTENT_QUERY = `

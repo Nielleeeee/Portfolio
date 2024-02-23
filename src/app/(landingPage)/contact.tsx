@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { MainContainer } from "@/components/containers";
+import { MainContainer } from "@/components/container/containers";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { toast } from "react-toastify";
