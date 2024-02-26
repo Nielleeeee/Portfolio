@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { MainContainer } from "@/components/container/containers";
 import Header from "../../components/layout/header";
 import Socials from "@/components/socials/socials";
-import Transition from "@/components/transition/transition";
+import { TransitionFadeIn, TransitionMoveUp } from "@/components/animation/transition";
 
 export default function introduction() {
   return (
@@ -12,23 +11,25 @@ export default function introduction() {
       id="introduction"
       className="w-full h-auto bg-[url('/sun-tornado.png')] bg-no-repeat bg-center bg-fixed bg-cover"
     >
-      <Transition>
+      <TransitionFadeIn>
         <MainContainer>
           <Header />
           <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-8 py-[60px] justify-evenly items-center">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-4xl font-bold text-white text-center">
-                Hi, I&apos;m Jan Danielle Plaza
-              </h1>
-              <h2 className="text-xl font-medium text-white max-w-lg text-center">
-                A Full Stack Developer, It&apos;s a pleasure to have you here as
-                we delve into my web development ventures.
-              </h2>
+            <TransitionMoveUp>
+              <div className="flex flex-col gap-4">
+                <h1 className="text-4xl font-bold text-white text-center">
+                  Hi, I&apos;m Jan Danielle Plaza
+                </h1>
+                <h2 className="text-xl font-medium text-white max-w-lg text-center">
+                  A Full Stack Developer, It&apos;s a pleasure to have you here
+                  as we delve into my web development ventures.
+                </h2>
 
-              <div className="w-full flex items-center justify-center mt-10">
-                <Socials />
+                <div className="w-full flex items-center justify-center mt-10">
+                  <Socials />
+                </div>
               </div>
-            </div>
+            </TransitionMoveUp>
 
             <Image
               src={"/laptop-sitting.gif"}
@@ -39,7 +40,7 @@ export default function introduction() {
             />
           </div>
         </MainContainer>
-      </Transition>
+      </TransitionFadeIn>
     </section>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MainContainer } from "@/components/container/containers";
-import Transition from "@/components/transition/transition";
+import { TransitionMoveUp } from "@/components/animation/transition";
 import { performRequest } from "@/lib/datocms";
 
 const PAGE_CONTENT_QUERY = `
@@ -20,7 +20,7 @@ export default async function About() {
 
   return (
     <section id="about" className="w-full h-auto bg-white py-10">
-      <Transition>
+      <TransitionMoveUp>
         <MainContainer>
           <div
             id="row-wrapper"
@@ -48,7 +48,7 @@ export default async function About() {
             </div>
           </div>
         </MainContainer>
-      </Transition>
+      </TransitionMoveUp>
     </section>
   );
 }

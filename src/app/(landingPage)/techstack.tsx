@@ -1,6 +1,6 @@
 import React from "react";
 import { MainContainer } from "@/components/container/containers";
-import Transition from "@/components/transition/transition";
+import { TransitionMoveUp } from "@/components/animation/transition";
 import TechStackSlider from "@/components/slider/techStackSlider";
 import { performRequest } from "@/lib/datocms";
 
@@ -24,7 +24,7 @@ export default async function TechStack() {
       id="tech-stack"
       className="w-full h-auto bg-[url('/liquid-cheese.png')] bg-no-repeat bg-center bg-fixed bg-cover py-20"
     >
-      <Transition>
+      <TransitionMoveUp>
         <MainContainer>
           <h2 className="w-full text-center text-secondary font-bold text-3xl mb-10 xl:mb-20">
             Tech Stack
@@ -37,7 +37,7 @@ export default async function TechStack() {
             <TechStackSlider allTechStacks={allTechStacks} />
           </div>
         </MainContainer>
-      </Transition>
+      </TransitionMoveUp>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import Transition from "@/components/transition/transition";
+import { TransitionMoveUp } from "@/components/animation/transition";
 import { MainContainer } from "@/components/container/containers";
 import CertificateSlider from "@/components/slider/certificateSlider";
 import { performRequest } from "@/lib/datocms";
@@ -36,8 +36,8 @@ export default async function Certificate() {
       id="certificate"
       className="w-full py-10 bg-[url('/bg-wave.png')] bg-no-repeat bg-bottom bg-cover"
     >
-      <Transition>
-        <MainContainer>
+      <MainContainer>
+        <TransitionMoveUp>
           <div className="flex flex-col justify-center gap-4 lg:gap-8 z-10">
             <h3 className="font-bold text-3xl text-secondary text-center">
               Certificates
@@ -45,8 +45,8 @@ export default async function Certificate() {
 
             <CertificateSlider certificateSources={allCertificates} />
           </div>
-        </MainContainer>
-      </Transition>
+        </TransitionMoveUp>
+      </MainContainer>
     </section>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { MainContainer } from "@/components/container/containers";
-import Transition from "@/components/transition/transition";
+import { TransitionMoveUp } from "@/components/animation/transition";
 import ContactForm from "@/components/form/contactForm";
 
 export default function Contact() {
@@ -10,8 +10,8 @@ export default function Contact() {
       id="contact"
       className="bg-[url('/flat-mountains.png')] bg-no-repeat bg-center bg-fixed bg-cover"
     >
-      <Transition>
-        <MainContainer>
+      <MainContainer>
+        <TransitionMoveUp>
           <div className="mx-auto max-w-screen-xl py-16 sm:px-4 lg:px-6">
             <div className="grid grid-cols-1 gap-x-12 gap-y-6 lg:grid-cols-5 items-center">
               <div className="lg:col-span-2 lg:py-12 text-white bg-white/10 backdrop-blur-xl px-6 py-6 rounded-lg">
@@ -89,8 +89,8 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </MainContainer>
-      </Transition>
+        </TransitionMoveUp>
+      </MainContainer>
     </section>
   );
 }

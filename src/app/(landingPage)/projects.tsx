@@ -1,6 +1,6 @@
 import React from "react";
 import { MainContainer } from "@/components/container/containers";
-import Transition from "@/components/transition/transition";
+import { TransitionMoveUp } from "@/components/animation/transition";
 import { performRequest } from "@/lib/datocms";
 import ProjectList from "@/components/list-project/projectList";
 
@@ -56,8 +56,8 @@ export default async function Projects() {
       id="projects"
       className="w-full h-auto bg-white py-10 bg-[url('/endless-constellation.png')] bg-no-repeat bg-center bg-fixed bg-cover"
     >
-      <Transition>
-        <MainContainer>
+      <MainContainer>
+        <TransitionMoveUp>
           <div className="py-5 lg:py-10">
             <h2 className="w-full text-center text-secondary font-bold text-3xl mb-10">
               Personal Projects
@@ -66,7 +66,9 @@ export default async function Projects() {
               <ProjectList projectList={allPersonalProjects} />
             </div>
           </div>
+        </TransitionMoveUp>
 
+        <TransitionMoveUp>
           <div className="py-5 lg:py-10">
             <h2 className="w-full text-center text-secondary font-bold text-3xl mb-10">
               Work Projects
@@ -75,8 +77,8 @@ export default async function Projects() {
               <ProjectList projectList={allWorkProjects} />
             </div>
           </div>
-        </MainContainer>
-      </Transition>
+        </TransitionMoveUp>
+      </MainContainer>
     </section>
   );
 }
