@@ -7,8 +7,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
-  const [isLoading, setIsLoading] = useState(false);
-
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -24,7 +22,6 @@ export default function ContactForm() {
       message: Yup.string().required("Message is required"),
     }),
     onSubmit: async (values, { resetForm }) => {
-      setIsLoading(true);
       try {
         const data = fetch("/api/contact", {
           method: "POST",
@@ -43,10 +40,8 @@ export default function ContactForm() {
         const response = await data;
 
         if (response.ok) {
-          setIsLoading(false);
           resetForm();
         } else {
-          setIsLoading(false);
           const errorMessage = await response.text();
           console.error(`Error: ${response.status} - ${response.statusText}`);
           console.error(errorMessage);
@@ -66,8 +61,8 @@ export default function ContactForm() {
         <input
           className={`w-full rounded-lg p-3 text-sm ${
             formik.touched.message && formik.errors.name
-              ? "border-secondary"
-              : "border-black"
+              ? "border-secondary border-2"
+              : "border-black border"
           }`}
           placeholder="Name"
           type="text"
@@ -86,8 +81,8 @@ export default function ContactForm() {
           <input
             className={`w-full rounded-lg p-3 text-sm ${
               formik.touched.message && formik.errors.email
-                ? "border-secondary"
-                : "border-black"
+                ? "border-secondary border-2"
+                : "border-black border"
             }`}
             placeholder="Email address"
             type="email"
@@ -103,7 +98,7 @@ export default function ContactForm() {
             Phone
           </label>
           <input
-            className="w-full rounded-lg border-black p-3 text-sm"
+            className="w-full rounded-lg border-black border p-3 text-sm"
             placeholder="Phone Number"
             type="tel"
             id="phoneNumber"
@@ -122,8 +117,8 @@ export default function ContactForm() {
         <textarea
           className={`w-full rounded-lg p-3 text-sm ${
             formik.touched.message && formik.errors.message
-              ? "border-secondary"
-              : "border-black"
+              ? "border-secondary border-2"
+              : "border-black border"
           }`}
           placeholder="Message"
           rows={8}
@@ -137,7 +132,7 @@ export default function ContactForm() {
       <div className="mt-4">
         <button
           type="submit"
-          disabled={isLoading}
+          disabled={formik.isSubmitting}
           className="inline-block w-full rounded-lg disabled:bg-[#9b9b9b] bg-secondary px-5 py-3 font-medium text-white sm:w-auto"
         >
           Send Enquiry
