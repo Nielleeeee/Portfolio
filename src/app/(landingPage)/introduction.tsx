@@ -1,11 +1,42 @@
 import React from "react";
-import Image from "next/image";
 import { MainContainer } from "@/components/container/containers";
 import Header from "../../components/layout/header";
 import Socials from "@/components/socials/socials";
-import { TransitionFadeIn, TransitionMoveUp } from "@/components/animation/transition";
+import { Image as DatocmsImage } from "react-datocms";
+import {
+  TransitionFadeIn,
+  TransitionMoveUp,
+} from "@/components/animation/transition";
+import { performRequest } from "@/lib/datocms";
 
-export default function introduction() {
+const PAGE_CONTENT_QUERY = `
+  query About {
+    introduction {
+      title
+      subtitle
+      media {
+        responsiveImage {
+          sizes
+          src
+          width
+          height
+          alt
+          title
+          base64
+        }
+      }
+    }
+  }`;
+
+export default async function introduction() {
+  const {
+    data: { introduction },
+  } = await performRequest({ query: PAGE_CONTENT_QUERY });
+
+  const title = introduction.title;
+  const subtitle = introduction.subtitle;
+  const media = introduction.media.responsiveImage;
+
   return (
     <section
       id="introduction"
@@ -18,11 +49,10 @@ export default function introduction() {
             <TransitionMoveUp>
               <div className="flex flex-col gap-4">
                 <h1 className="text-4xl font-bold text-white text-center">
-                  Hi, I&apos;m Jan Danielle Plaza
+                  {title}
                 </h1>
                 <h2 className="text-xl font-medium text-white max-w-lg text-center">
-                  A Full Stack Developer, It&apos;s a pleasure to have you here
-                  as we delve into my web development ventures.
+                  {subtitle}
                 </h2>
 
                 <div className="w-full flex items-center justify-center mt-10">
@@ -31,12 +61,9 @@ export default function introduction() {
               </div>
             </TransitionMoveUp>
 
-            <Image
-              src={"/laptop-sitting.gif"}
-              alt="balancing"
-              width={100}
-              height={100}
-              className="w-full sm:w-[75%] md:w-1/2 lg:w-1/3 rounded-[30px]"
+            <DatocmsImage
+              data={media}
+              className="w-full !max-w-[360px] lg:!max-w-[460px] rounded-3xl"
             />
           </div>
         </MainContainer>
