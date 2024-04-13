@@ -10,7 +10,7 @@ export const performRequest = async ({
     },
     method: "POST",
     body: JSON.stringify({ query, variables }),
-    next: { tags: ["datocms"], revalidate: 60 },
+    next: { tags: ["datocms"], revalidate: 300 },
   });
 
   const responseBody = await response.json();
