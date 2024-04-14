@@ -41,7 +41,7 @@ export default async function Experience() {
           Education
         </h2>
 
-        <div className="flex flex-row justify-evenly mb-20 px-4 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12">
+        <div className="flex flex-row justify-evenly mb-20 px-4 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12 overflow-hidden">
           <ol className="relative border-l border-white h-max w-full md:w-1/3">
             <TransitionMoveLeft>
               {allEducations &&
@@ -75,7 +75,7 @@ export default async function Experience() {
           Experience
         </h2>
 
-        <div className="flex flex-row justify-between px-4 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12">
+        <div className="flex flex-row justify-between px-4 md:px-0 lg:px-12 gap-4 lg:gap-8 xl:gap-12 overflow-hidden">
           <div className="md:px-4 md:h-[500px] minimal-scrollbar md:overflow-y-auto w-full md:w-[60%]">
             <TransitionMoveLeft>
               <ol className="relative border-l border-white h-full w-full">
